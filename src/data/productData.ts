@@ -56,11 +56,14 @@ export interface CartItem {
   qty: number;
 }
 
+const assetUrl = (path: string) =>
+  `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`;
+
 export const IMAGES = {
-  logo: '/assets/images/klar_logo.jpg',
-  bottle: '/assets/images/klar_bottle.jpg',
-  faucetBefore: '/assets/images/faucet_before.jpg',
-  faucetAfter: '/assets/images/faucet_after.jpg',
+  logo: assetUrl('assets/images/klar_logo.jpg'),
+  bottle: assetUrl('assets/images/klar_bottle.jpg'),
+  faucetBefore: assetUrl('assets/images/faucet_before.jpg'),
+  faucetAfter: assetUrl('assets/images/faucet_after.jpg'),
 };
 
 export const MAIN_PRODUCT: Omit<CartItem, 'qty'> = {
@@ -179,7 +182,7 @@ export const RELATED_PRODUCTS_DATA: RelatedProduct[] = [
     deliveryFee: '3,000원',
     rating: 4.88,
     reviewCount: 334,
-    image: '/assets/images/related_wc.jpg',
+    image: assetUrl('assets/images/related_wc.jpg'),
     badge: '21% 할인',
     desc: '곡선형 노즐로 변기 테두리 안쪽 물때와 요석까지 빈틈없이 밀착 케어',
   },
@@ -193,7 +196,7 @@ export const RELATED_PRODUCTS_DATA: RelatedProduct[] = [
     deliveryFee: '3,000원',
     rating: 4.78,
     reviewCount: 592,
-    image: '/assets/images/related_kitchen.jpg',
+    image: assetUrl('assets/images/related_kitchen.jpg'),
     badge: '16% 할인',
     desc: '인덕션, 냄비 바닥, 싱크대 찌든 기름때를 표면 손상 없이 깨끗하게 세정',
   },
@@ -209,7 +212,7 @@ export const RELATED_PRODUCTS_DATA: RelatedProduct[] = [
     deliveryFee: '무료배송',
     rating: 4.83,
     reviewCount: 193,
-    image: '/assets/images/related_laundry.jpg',
+    image: assetUrl('assets/images/related_laundry.jpg'),
     badge: '최대할인 21,600원',
     desc: '천연 사포닌 성분의 소프넛 추출물 함유, 민감 피부와 아기 옷도 안심하는 고농축 비건 세제',
   },
