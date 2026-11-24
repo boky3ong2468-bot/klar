@@ -1,0 +1,6 @@
+{
+  "name": "클라(Klar) 무향 욕실세정제 - 에코 센시티브 케어",
+  "description": "독일 프리미엄 에코 센시티브 무향 욕실세정제 500ml 상세 페이지 - 물때 케어 및 피부 저자극",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
